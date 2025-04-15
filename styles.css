@@ -1,0 +1,80 @@
+/* Reset & base setup */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ffc0cb4d;
+    overflow: hidden; /* prevent full-page scroll */
+    box-sizing: border-box;
+}
+
+/* Fixed Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #ff91a4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: url('media/pastels-light.jpg') no-repeat center center; background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Main layout */
+main {
+    display: flex;
+    height: calc(100vh - 60px); /* below the header */
+    margin-top: 60px; /* offset for fixed header */
+}
+
+/* Sidebar */
+.contents {
+    width: 200px;
+    background-color: #F2EFD4;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Main dashboard area */
+.dashboard {
+    flex: 1;
+    padding: 20px;
+    background-color: #FAF9EF;
+    overflow-y: auto;
+}
+
+
+.contents ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul :hover{
+    cursor: pointer;
+}
+
+#homeLink {
+    cursor: pointer;
+}
+.contents h2 {
+    font-size: 21px;
+}
+
+li {
+    margin: 15px 0;
+}
+
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
