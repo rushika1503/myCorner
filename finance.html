@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance</title>
+    <link rel="stylesheet" href="finance.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <!-- 🔹 Top Navigation -->
+
+    <div class="finance-container">
+      <!-- 🔸 Left: Transaction buttons -->
+      <div class="transaction-type">
+        <label>Track It:</label>
+        <button class="income-action-button">
+          <i class="fas fa-plus"></i>
+          <span>New Income</span>
+        </button>
+        <button class="expenses-action-button">
+          <i class="fas fa-plus"></i>
+          <span>New Expense</span>
+        </button>
+        <hr />
+        <label>Balance:</label>
+        <div class="balance-display">
+          <span id="balance">0</span>
+        </div>
+      </div>
+
+      <!-- 🔸 Right: Charts -->
+      <div class="total-expenses-income">
+        <div class="total-expenses">
+          <h3>Total Expenses</h3>
+          <canvas
+            id="myDoughnutChart-expense"
+            width="300"
+            height="300"
+          ></canvas>
+        </div>
+        <div class="total-income">
+          <h3>Total Income</h3>
+          <canvas id="myDoughnutChart-income" width="300" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

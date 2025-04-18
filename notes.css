@@ -1,0 +1,103 @@
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: "Arial", sans-serif;
+}
+
+/* Main container for notes page */
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  margin: 60px auto 0;
+  box-sizing: border-box;
+}
+
+/* Apply uniform width to all direct child divs */
+.notes-container > div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Star icon and title input */
+.entry-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#starButton {
+  font-size: 20px;
+  color: gray;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#starButton.starred {
+  color: gold;
+}
+
+.entry-title {
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+/* Date and word count row */
+.date-word-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.date-word-count p {
+  margin: 0;
+}
+
+#dateInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Notes textarea */
+.myNotes {
+  margin-top: 20px;
+}
+
+#myNotes {
+  width: 100%;
+  min-height: 200px;
+  background-color: white;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  box-sizing: border-box;
+  outline: none;
+  overflow: hidden; /* Hide scrollbars */
+  transition: height 0.3s ease; /* Smooth transition for height change */
+  resize: none;
+}

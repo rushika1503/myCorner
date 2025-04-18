@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Web Page</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="icon" href="data:,">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="data:," />
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header class="main-header">
+    Hey Rushika, welcome back!
+  </header>
 
-    </head>
-    <body>
-        <header>
-            
-            <h1>Hey Rushika, welcome back!  </h1>
-        </header>
-    
-        <main>
-            <div class="contents">
-                <h2 id="homeLink">My Corner</h2>
-                <ul>
-                    <li data-page="notes.html"><img src="icons/notes.png" class="icon">Notes</li>
-                    <li><img src="icons/investment.png" class="icon">Finance</li>
-                    <li><img src="icons/to-do-list.png" class="icon"></i>To Do</li>
-                    <li><img src="icons/emoji.png" class="icon"> Mood</li>
-                    <!-- <li>Weather</li> -->
-                    <li><img src="icons/time-management.png" class="icon">Calendar</li>
-                    <!-- <li>Reminders</li> -->
-                    <li><img src="icons/setting.png" class="icon">Settings</li>
-                </ul>
-            </div>
-    
-            <div class="dashboard">
-                <textarea id="myNotes" placeholder="Type something..."></textarea>
-                <button onclick="logTextarea()">Log Value</button>
-            </div>
-        </main>
-    </body>
-    
-    <script src="script.js"></script>
+  <!-- Main Content Area -->
+  <main>
+    <!-- Sidebar -->
+    <div class="contents">
+      <h2 id="homeLink" data-page="myCorner.html" data-script="script.js">
+        My Corner
+      </h2>
+      <ul>
+        <li data-page="notes.html" data-script="notes.js">
+          <img src="icons/notes.png" class="icon" /> Notes
+        </li>
+        <li data-page="finance.html" data-script="finance.js">
+          <img src="icons/investment.png" class="icon" /> Finance
+        </li>
+        <li>
+          <img src="icons/to-do-list.png" class="icon" /> To Do
+        </li>
+        <li>
+          <img src="icons/emoji.png" class="icon" /> Mood
+        </li>
+        <li>
+          <img src="icons/time-management.png" class="icon" /> Calendar
+        </li>
+        <li>
+          <img src="icons/setting.png" class="icon" /> Settings
+        </li>
+      </ul>
+    </div>
 
+    <!-- Dynamic Content Loader -->
+    <div class="dashboard">
+      <textarea id="myNotes" placeholder="Type something..."></textarea>
+      <button onclick="logTextarea()">Log Value</button>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
 </html>

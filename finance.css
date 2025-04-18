@@ -1,0 +1,131 @@
+/* 🔹 Navbar */
+.navbar {
+  background-color: #2b87da;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 🔹 Finance Layout */
+.finance-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 60px auto 0;
+}
+
+/* 🔸 Left side - Buttons */
+.transaction-type {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 200px;
+  flex: 1 1 200px;
+  /* background-color: #fff; */
+  /* border: 1px solid #ddd; */
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.income-action-button,
+.expenses-action-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: white;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.income-action-button:hover,
+.expenses-action-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* 🔸 Right side - Charts */
+.total-expenses-income {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  flex: 2;
+}
+
+.total-expenses,
+.total-income {
+  flex: 1 1 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  /* border: 1px solid #ddd; */
+}
+
+.total-income canvas,
+.total-expenses canvas {
+  max-width: 250px;
+  max-height: 250px;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.total-expenses,
+.total-income {
+  height: 300px; /* Or 250px or whatever works visually */
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* 🔸 Responsive Behavior */
+@media (max-width: 900px) {
+  .finance-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transaction-type {
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+  }
+
+  .total-expenses-income {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .total-expenses,
+  .total-income {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .total-income canvas,
+    .total-expenses canvas {
+      max-width: 200px;
+    }
+  }
+  

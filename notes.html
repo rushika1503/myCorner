@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Notes</title>
+    <link rel="stylesheet" href="notes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div class="notes-container">
+      <div class="entry-title-row">
+        <i id="starButton" class="fas fa-star" title="Mark as Starred"></i>
 
-    </head>
-    <body>
-        <h1>My Thoughts</h1>
-        <p>Take a few minutes to jot down the reasons why you want to</p>
-        <!-- filter using or serach kind starred entries 
-        calendar -->
-        <div class="Calendar">
-            <input type="date" id="dateInput" value="2023-10-01">
-        </div>
-        <div class="myNotes">
-
-            <textarea id="myNotes" placeholder="Type something..."></textarea>
-            <button onclick="logTextarea()">Log Value</button>
-            <button onclick="clearTextarea()">Clear</button>
-        </div>
-    </body>
+        <input
+          type="text"
+          id="title"
+          placeholder="Entry Title"
+          class="entry-title"
+        />
+      </div>
+      <hr />
+      <div class="date-word-count">
+        <input type="date" id="dateInput" value="2023-10-01" />
+        <p><span id="wordCount">0</span> Words</p>
+      </div>
+      <div class="myNotes">
+        <textarea id="myNotes" placeholder="Type something..."></textarea>
+      </div>
+    </div>
+  </body>
 </html>
